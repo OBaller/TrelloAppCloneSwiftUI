@@ -44,7 +44,7 @@ class BoardList: NSObject, ObservableObject, Identifiable, Codable {
 }
 
 extension BoardList: NSItemProviderWriting {
-    static let typeIdentifier = "com.brightsummit.TrelloAppClone.Card"
+    static let typeIdentifier = "com.brightsummit.TrelloAppClone.BoardList"
 
     static var writableTypeIdentifiersForItemProvider: [String] {
         [typeIdentifier]
