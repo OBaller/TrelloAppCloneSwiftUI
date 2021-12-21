@@ -15,6 +15,7 @@
 		B450C9B5277245B0001608FD /* BoardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B450C9B4277245B0001608FD /* BoardListView.swift */; };
 		B4C8729527726D360072347E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8729427726D360072347E /* CardView.swift */; };
 		B4C8729B2772851D0072347E /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = B4C8729A2772851D0072347E /* Introspect */; };
+		B4C8729D2772967E0072347E /* View+AlertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8729C2772967E0072347E /* View+AlertTextField.swift */; };
 		B4FCFB5B27598634003BE303 /* TrelloAppCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCFB5A27598634003BE303 /* TrelloAppCloneApp.swift */; };
 		B4FCFB5F2759863E003BE303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4FCFB5E2759863E003BE303 /* Assets.xcassets */; };
 		B4FCFB622759863E003BE303 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4FCFB612759863E003BE303 /* Preview Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		B450C9B2277235FA001608FD /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		B450C9B4277245B0001608FD /* BoardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListView.swift; sourceTree = "<group>"; };
 		B4C8729427726D360072347E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B4C8729C2772967E0072347E /* View+AlertTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AlertTextField.swift"; sourceTree = "<group>"; };
 		B4FCFB5727598634003BE303 /* TrelloAppClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrelloAppClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FCFB5A27598634003BE303 /* TrelloAppCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrelloAppCloneApp.swift; sourceTree = "<group>"; };
 		B4FCFB5E2759863E003BE303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				B450C9B2277235FA001608FD /* BoardView.swift */,
 				B450C9B4277245B0001608FD /* BoardListView.swift */,
 				B4C8729427726D360072347E /* CardView.swift */,
+				B4C8729C2772967E0072347E /* View+AlertTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				B450C9B5277245B0001608FD /* BoardListView.swift in Sources */,
 				B43062652770CEEC00AC0886 /* BoardList.swift in Sources */,
 				B4C8729527726D360072347E /* CardView.swift in Sources */,
+				B4C8729D2772967E0072347E /* View+AlertTextField.swift in Sources */,
 				B4FCFB5B27598634003BE303 /* TrelloAppCloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +323,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TrelloAppClone/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TrelloAppClone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,7 +344,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TrelloAppClone/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TrelloAppClone/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

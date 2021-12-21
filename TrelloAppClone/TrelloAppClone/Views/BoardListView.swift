@@ -13,7 +13,6 @@ struct BoardListView: View {
     @StateObject var boardList: BoardList
     @State var listHeight: CGFloat = 0
     var body: some View {
-        if #available(iOS 15.0, *) {
             VStack(alignment: .leading, spacing: 16) {
                 headerView
                 listView
@@ -32,9 +31,6 @@ struct BoardListView: View {
             .frame(width: 300)
             .cornerRadius(8)
             .foregroundColor(.black)
-        } else {
-            // Fallback on earlier versions
-        }
     }
     
     private var headerView: some View {
@@ -49,14 +45,9 @@ struct BoardListView: View {
                 Button("Rename") {
                     
                 }
-                
-                if #available(iOS 15.0, *) {
-                    Button("Delete", role: .destructive) {
+                Button("Delete", role: .destructive) {
                         
                     }
-                } else {
-                    // Fallback on earlier versions
-                }
                 
             } label: {
                 Image(systemName: "ellipsis.circle")
@@ -68,7 +59,6 @@ struct BoardListView: View {
     
     private var listView: some View {
         List {
-            if #available(iOS 15.0, *) {
                 ForEach(boardList.cards) { card in
                     CardView(boardList: boardList, card: card)
                 }
@@ -78,9 +68,6 @@ struct BoardListView: View {
                 .introspectTableView {
                     listHeight = $0.contentSize.height
                 }
-            } else {
-                // Fallback on earlier versions
-            }
         }
     }
 }

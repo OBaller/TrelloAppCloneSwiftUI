@@ -16,11 +16,8 @@ struct CardView: View {
                 Spacer()
             Menu {
                 Button("Rename") {}
-                if #available(iOS 15.0, *) {
-                    Button("Delete", role: .destructive) {}
-                } else {
-                    // Fallback on earlier versions
-                }
+                Button("Delete", role: .destructive) {}
+                
             } label: {
                 Image(systemName: "ellipsis.rectangle")
                     .imageScale(.small)
