@@ -66,7 +66,7 @@ struct BoardListView: View {
         List {
             if #available(iOS 15.0, *) {
                 ForEach(boardList.cards) { card in
-                    Text(card.content)
+                    CardView(boardList: boardList, card: card)
                 }
                 .listRowSeparator(.hidden)
                 .listRowInsets(.init(top: 4, leading: 8, bottom: 4, trailing: 8))

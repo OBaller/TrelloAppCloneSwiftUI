@@ -19,8 +19,8 @@ struct BoardView: View {
             if #available(iOS 15.0, *) {
                 ScrollView(.horizontal){
                     LazyHStack(alignment: .top, spacing: 24) {
-                        ForEach(board.lists){ boardList in
-                            Text(boardList.name)
+                        ForEach(board.lists) { boardList in
+                            BoardListView(board: board, boardList: boardList)
                         }
                         Button("+ Add List "){
                             
