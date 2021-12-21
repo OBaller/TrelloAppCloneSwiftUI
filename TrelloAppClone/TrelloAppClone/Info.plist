@@ -63,6 +63,8 @@
 			<string>com.brightsummit.TrelloAppClone.BoardList</string>
 			<key>UTTypeIconFiles</key>
 			<array/>
+			<key>UTTypeIdentifier</key>
+			<string>com.brightsummit.TrelloAppClone.BoardList</string>
 			<key>UTTypeTagSpecification</key>
 			<dict/>
 		</dict>

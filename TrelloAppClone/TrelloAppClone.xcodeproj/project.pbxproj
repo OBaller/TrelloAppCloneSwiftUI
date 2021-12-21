@@ -10,6 +10,7 @@
 		B43062632770CC7900AC0886 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43062622770CC7900AC0886 /* Card.swift */; };
 		B43062652770CEEC00AC0886 /* BoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43062642770CEEC00AC0886 /* BoardList.swift */; };
 		B43062672770D11A00AC0886 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43062662770D11A00AC0886 /* Board.swift */; };
+		B4306269277134D000AC0886 /* Board+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4306268277134D000AC0886 /* Board+Stub.swift */; };
 		B4FCFB5B27598634003BE303 /* TrelloAppCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCFB5A27598634003BE303 /* TrelloAppCloneApp.swift */; };
 		B4FCFB5D27598634003BE303 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCFB5C27598634003BE303 /* ContentView.swift */; };
 		B4FCFB5F2759863E003BE303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4FCFB5E2759863E003BE303 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		B43062622770CC7900AC0886 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		B43062642770CEEC00AC0886 /* BoardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardList.swift; sourceTree = "<group>"; };
 		B43062662770D11A00AC0886 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		B4306268277134D000AC0886 /* Board+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Board+Stub.swift"; sourceTree = "<group>"; };
 		B4FCFB5727598634003BE303 /* TrelloAppClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrelloAppClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FCFB5A27598634003BE303 /* TrelloAppCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrelloAppCloneApp.swift; sourceTree = "<group>"; };
 		B4FCFB5C27598634003BE303 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 				B43062622770CC7900AC0886 /* Card.swift */,
 				B43062642770CEEC00AC0886 /* BoardList.swift */,
 				B43062662770D11A00AC0886 /* Board.swift */,
+				B4306268277134D000AC0886 /* Board+Stub.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4306269277134D000AC0886 /* Board+Stub.swift in Sources */,
 				B4FCFB5D27598634003BE303 /* ContentView.swift in Sources */,
 				B43062632770CC7900AC0886 /* Card.swift in Sources */,
 				B43062672770D11A00AC0886 /* Board.swift in Sources */,
