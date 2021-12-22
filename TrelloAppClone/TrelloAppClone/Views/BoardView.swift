@@ -21,7 +21,7 @@ struct BoardView: View {
                                 .onDrop(of: [Card.typeIdentifier], delegate: BoardDropDelegate(board: board, boardList: boardList))
                         }
                         Button("+ Add List "){
-                            
+                            handleOnAddList()
                         }
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -40,6 +40,16 @@ struct BoardView: View {
                 .navigationBarTitle(board.name, displayMode: .inline)
         }
         .navigationViewStyle(.stack )
+    }
+    
+    func handleOnAddList() {
+        presentAlertTextField(title: "Add list") { text in
+            guard let text = text, !text.isEmpty else {
+                return
+            }
+            board.addNewBoardListWithName(text)
+
+        }
     }
 }
 

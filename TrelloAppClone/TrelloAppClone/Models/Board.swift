@@ -28,6 +28,15 @@ class Board: ObservableObject, Identifiable {
         lists[sourceBoardListIndex].cards.remove(at: sourceCardIndex)
     }
     
+    func addNewBoardListWithName(_ name: String) {
+        lists.append(BoardList(name: name, boardID: id))
+    }
+    
+    func removeBoardList(_ boardlist: BoardList) {
+        guard let index = boardListIndext(id: boardlist.id) else { return }
+        lists.remove(at: index)
+    }
+    
     private func cardIndex(id: UUID, boardIndex: Int) -> Int? {
         lists[boardIndex].cardIndex(id: id)
     }
