@@ -31,6 +31,7 @@ struct BoardView: View {
                         .foregroundColor(.black)
                     }
                     .padding()
+                    .animation(.default, value: board.lists)
                     
                 }
 //                .background(trelloBlueBackgroundColor)
