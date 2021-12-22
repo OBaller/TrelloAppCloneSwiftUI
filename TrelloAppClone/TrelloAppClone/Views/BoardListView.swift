@@ -43,10 +43,10 @@ struct BoardListView: View {
             
             Menu {
                 Button("Rename") {
-                    
+                    handleBoardListRename()
                 }
                 Button("Delete", role: .destructive) {
-                        
+                    board.removeBoardList(boardList)
                     }
                 
             } label: {
@@ -73,6 +73,15 @@ struct BoardListView: View {
                 .introspectTableView {
                     listHeight = $0.contentSize.height
                 }
+        }
+    }
+    
+    private func handleBoardListRename() {
+        presentAlertTextField(title: "Rename list", defaultTextFieldText: boardList.name) { text in
+            guard let text = text, !text.isEmpty else {
+                return
+            }
+            boardList.name = text
         }
     }
     
