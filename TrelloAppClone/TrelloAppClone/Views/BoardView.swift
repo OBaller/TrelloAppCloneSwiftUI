@@ -13,11 +13,12 @@ let trelloBlueBackgroundColor = Color(uiColor: UIColor(red: 0.2, green: 0.47, bl
 struct BoardView: View {
         @StateObject private var board: Board = Board.stub
     var body: some View {
-        NavigationView{
+        NavigationView {
                 ScrollView(.horizontal){
                     LazyHStack(alignment: .top, spacing: 24) {
                         ForEach(board.lists) { boardList in
                             BoardListView(board: board, boardList: boardList)
+                                .onDrop(of: [Card.typeIdentifier], delegate: BoardDropDelegate(board: board, boardList: boardList))
                         }
                         Button("+ Add List "){
                             
