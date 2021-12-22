@@ -65,6 +65,7 @@ struct BoardListView: View {
                             NSItemProvider(object: card)
                         }
                 }
+                .onInsert(of: [Card.typeIdentifier], perform: handleOnInsertCard)
                 .onMove(perform: boardList.moveCards(fromOffsets:toOffset:))
                 .listRowSeparator(.hidden)
                 .listRowInsets(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
@@ -72,6 +73,18 @@ struct BoardListView: View {
                 .introspectTableView {
                     listHeight = $0.contentSize.height
                 }
+        }
+    }
+    
+    private func handleOnInsertCard(index: Int, itemProviders: [NSItemProvider]) {
+        for itemProvider in itemProviders {
+            itemProvider.loadObject(ofClass: Card.self) { item, _ in
+                guard let card = item as? Card else { return }
+                DispatchQueue.main.async {
+                    board.move(card: card, to: boardList, at: index)
+                }
+                
+            }
         }
     }
     
