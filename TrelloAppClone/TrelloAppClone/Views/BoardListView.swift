@@ -20,7 +20,7 @@ struct BoardListView: View {
                     .frame(maxHeight: listHeight)
                 
                 Button(" + Add Card ") {
-                    
+                    handleAddCard()
                 }
                 .padding(.horizontal)
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -61,7 +61,11 @@ struct BoardListView: View {
         List {
                 ForEach(boardList.cards) { card in
                     CardView(boardList: boardList, card: card)
+                        .onDrag {
+                            NSItemProvider(object: card)
+                        }
                 }
+                .onMove(perform: boardList.moveCards(fromOffsets:toOffset:))
                 .listRowSeparator(.hidden)
                 .listRowInsets(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
                 .listRowBackground(Color.clear)

@@ -15,8 +15,8 @@ struct CardView: View {
             Text(card.content).lineLimit(3)
                 Spacer()
             Menu {
-                Button("Rename") {}
-                Button("Delete", role: .destructive) {}
+                Button("Edit") { handleEditCard() }
+                Button("Delete", role: .destructive) { boardList.removeCard(card)}
                 
             } label: {
                 Image(systemName: "ellipsis.rectangle")
@@ -28,6 +28,15 @@ struct CardView: View {
         .background(Color.white)
         .cornerRadius(4)
         .shadow(radius: 1, y: 1)
+    }
+    
+    private func handleEditCard() {
+        presentAlertTextField(title: "Edit Card", defaultTextFieldText: card.content) { text in
+            guard let text = text, !text.isEmpty else {
+                return
+            }
+            card.content = text
+        }
     }
 }
 
