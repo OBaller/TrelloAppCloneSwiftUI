@@ -13,6 +13,7 @@
 		B4306269277134D000AC0886 /* Board+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4306268277134D000AC0886 /* Board+Stub.swift */; };
 		B450C9B3277235FA001608FD /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B450C9B2277235FA001608FD /* BoardView.swift */; };
 		B450C9B5277245B0001608FD /* BoardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B450C9B4277245B0001608FD /* BoardListView.swift */; };
+		B4BB8933277352110066C3A4 /* BoardDiskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BB8932277352110066C3A4 /* BoardDiskRepository.swift */; };
 		B4C8729527726D360072347E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8729427726D360072347E /* CardView.swift */; };
 		B4C8729B2772851D0072347E /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = B4C8729A2772851D0072347E /* Introspect */; };
 		B4C8729D2772967E0072347E /* View+AlertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8729C2772967E0072347E /* View+AlertTextField.swift */; };
@@ -29,6 +30,7 @@
 		B4306268277134D000AC0886 /* Board+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Board+Stub.swift"; sourceTree = "<group>"; };
 		B450C9B2277235FA001608FD /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		B450C9B4277245B0001608FD /* BoardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListView.swift; sourceTree = "<group>"; };
+		B4BB8932277352110066C3A4 /* BoardDiskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardDiskRepository.swift; sourceTree = "<group>"; };
 		B4C8729427726D360072347E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B4C8729C2772967E0072347E /* View+AlertTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AlertTextField.swift"; sourceTree = "<group>"; };
 		B4C8729E277322980072347E /* BoardDropDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardDropDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				B43062662770D11A00AC0886 /* Board.swift */,
 				B4306268277134D000AC0886 /* Board+Stub.swift */,
 				B4C8729E277322980072347E /* BoardDropDelegate.swift */,
+				B4BB8932277352110066C3A4 /* BoardDiskRepository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				B450C9B3277235FA001608FD /* BoardView.swift in Sources */,
 				B4306269277134D000AC0886 /* Board+Stub.swift in Sources */,
 				B43062632770CC7900AC0886 /* Card.swift in Sources */,
+				B4BB8933277352110066C3A4 /* BoardDiskRepository.swift in Sources */,
 				B43062672770D11A00AC0886 /* Board.swift in Sources */,
 				B450C9B5277245B0001608FD /* BoardListView.swift in Sources */,
 				B43062652770CEEC00AC0886 /* BoardList.swift in Sources */,

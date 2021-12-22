@@ -11,7 +11,7 @@ let boardListBackgroundColor = Color(uiColor: UIColor(red: 0.92, green: 0.92, bl
 let trelloBlueBackgroundColor = Color(uiColor: UIColor(red: 0.2, green: 0.47, blue: 0.73, alpha: 1))
 
 struct BoardView: View {
-        @StateObject private var board: Board = Board.stub
+    @StateObject private var board: Board = BoardDiskRepository().loadFromDisk() ?? Board.stub
         @State private var dragging: BoardList?
     var body: some View {
         NavigationView {
@@ -44,8 +44,16 @@ struct BoardView: View {
                                 .resizable())
                 .edgesIgnoringSafeArea(.bottom)
                 .navigationBarTitle(board.name, displayMode: .inline)
+                .toolbar {
+                    Button("Rename") {
+                        handleRenameBoard()
+                    }
+                }
         }
         .navigationViewStyle(.stack )
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+            BoardDiskRepository().saveToDisk(board: board)
+        }
     }
     
     func handleOnAddList() {
@@ -55,6 +63,15 @@ struct BoardView: View {
             }
             board.addNewBoardListWithName(text)
 
+        }
+    }
+    
+    private func handleRenameBoard() {
+        presentAlertTextField(title: "Rename Board", defaultTextFieldText: board.name) { text in
+            guard let text = text, !text.isEmpty else {
+                return
+            }
+            board.name = text
         }
     }
 }
